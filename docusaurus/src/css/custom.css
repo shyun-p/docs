@@ -3127,3 +3127,22 @@
     padding: 1.25rem;
   }
 }
+
+/* ---------- Left menu without folding parts (sidebars/omx.ts) ----------
+   It keeps the usual letters and colours. The pages of a group are indented under its name, as usual.
+   .sidebar-title: a group that does not fold and is not a link, so it gets no hover colour or hand cursor.
+   .sidebar-row: a row that opens its own front page. The pages it holds stay in the menu but are hidden,
+   so they keep the menu and Previous / Next, and the row stays marked while one of them is open. */
+
+.sidebar-title > .menu__list-item-collapsible > .menu__link {
+  cursor: default;
+}
+
+.sidebar-title > .menu__list-item-collapsible:hover,
+.sidebar-title > .menu__list-item-collapsible > .menu__link:hover {
+  background: none;
+}
+
+.sidebar-row > .menu__list {
+  display: none !important;
+}
